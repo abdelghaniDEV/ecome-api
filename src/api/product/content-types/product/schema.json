@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categorie.categorie",
+      "inversedBy": "products"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sizeclothes": {
+      "type": "customField",
+      "options": [
+        "M",
+        "S",
+        "X",
+        "XL",
+        "XXL",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "45",
+        "46",
+        "47"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "better": {
+      "type": "boolean",
+      "default": false
+    },
+    "shortdescription": {
+      "type": "text"
+    },
+    "size": {
+      "type": "customField",
+      "customField": "plugin::strapi-plugin-lottie.lottie"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "imgdesc": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "json"
+    },
+    "outstock": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "stock": {
+      "type": "enumeration",
+      "enum": [
+        "instock",
+        "outstock"
+      ],
+      "default": "instock"
+    }
+  }
+}
