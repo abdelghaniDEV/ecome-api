@@ -90,3 +90,24 @@ module.exports = ({ env }) => {
     },
   };
 };
+
+
+
+    // strapi-api/config/database.js
+    // module.exports = ({ env }) => ({
+    //   connection: {
+    //     client: 'postgres',
+    //     connection: {
+    //       host: env('DATABASE_HOST', 'dpg-crjgb668ii6s73fg1bvg-a.oregon-postgres.render.com'),
+    //       port: env.int('DATABASE_PORT', 5432),
+    //       database: env('DATABASE_NAME', 'ecommercedb_d1pz'),
+    //       user: env('DATABASE_USERNAME', 'test'),
+    //       password: env('DATABASE_PASSWORD', 'gyfcSb9AkdAitXlkJ5CjfOOQPpWM0pxA'),
+    //       schema: env('DATABASE_SCHEMA', 'public'), // Not required
+    //       ssl: {
+    //         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+    //       },
+    //     },
+    //     debug: false,
+    //   },
+    // });
