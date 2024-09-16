@@ -114,6 +114,7 @@ module.exports = {
         quantity: item.amount,
       }));
 
+
       // Create Stripe checkout session
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -124,6 +125,7 @@ module.exports = {
       });
 
       console.log("Session Created:", session);
+
 
       // Send the session ID back to the frontend
       ctx.send({ id: session.id });
