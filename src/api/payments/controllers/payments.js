@@ -120,8 +120,8 @@ module.exports = {
         payment_method_types: ['card'],
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'http://localhost:3000/success',
-        cancel_url: 'http://localhost:3000/cancel',
+        success_url: 'http://abdelghanidev.github.io/ecommerce-demo/success',
+        cancel_url: 'http://abdelghanidev.github.io/ecommerce-demo/cancel',
       });
 
       console.log("Session Created:", session);
